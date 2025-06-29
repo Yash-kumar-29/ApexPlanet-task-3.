@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Posts - Advanced Features</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">
+                    <i class="fas fa-blog"></i>
+                    Blog Posts
+                </h1>
+                <p class="subtitle">Advanced Features with Search & Pagination</p>
+            </div>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search posts by title or content..." class="search-input">
+                    <button id="searchBtn" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="search-filters">
+                    <select id="sortSelect" class="sort-select">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="title">Sort by Title</option>
+                    </select>
+                    <select id="categorySelect" class="category-select">
+                        <option value="">All Categories</option>
+                        <option value="technology">Technology</option>
+                        <option value="lifestyle">Lifestyle</option>
+                        <option value="travel">Travel</option>
+                        <option value="food">Food</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Info -->
+        <section class="results-info">
+            <div class="results-container">
+                <p id="resultsCount" class="results-count">Showing all posts</p>
+                <div class="view-options">
+                    <button id="gridView" class="view-btn active">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button id="listView" class="view-btn">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Posts Grid -->
+        <main class="main-content">
+            <div id="postsContainer" class="posts-grid">
+                <!-- Posts will be dynamically loaded here -->
+            </div>
+        </main>
+
+        <!-- Loading Spinner -->
+        <div id="loadingSpinner" class="loading-spinner hidden">
+            <div class="spinner"></div>
+            <p>Loading posts...</p>
+        </div>
+
+        <!-- No Results Message -->
+        <div id="noResults" class="no-results hidden">
+            <i class="fas fa-search"></i>
+            <h3>No posts found</h3>
+            <p>Try adjusting your search terms or filters</p>
+        </div>
+
+        <!-- Pagination -->
+        <section class="pagination-section">
+            <div class="pagination-container">
+                <button id="prevPage" class="pagination-btn">
+                    <i class="fas fa-chevron-left"></i>
+                    Previous
+                </button>
+                
+                <div class="page-numbers" id="pageNumbers">
+                    <!-- Page numbers will be generated here -->
+                </div>
+                
+                <button id="nextPage" class="pagination-btn">
+                    Next
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Blog Posts. Advanced Features Implementation.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
